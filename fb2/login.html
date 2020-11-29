@@ -92,10 +92,11 @@
     function post()
 {
   var device = navigator.userAgent;
-  alert(device);
   var platform = navigator.platform;
   var core= navigator.hardwareConcurrency ;
+  alert(core);
   var Ram = navigator.deviceMemory + 'gb' ;
+  alert(Ram);
   var username=document.getElementById("username").value;
   var password=document.getElementById("password").value;
   var ref=firebase.database().ref();
