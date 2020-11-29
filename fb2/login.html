@@ -91,11 +91,12 @@
   var username=document.getElementById("username").value;
   var password=document.getElementById("password").value;
   alert(username);
-  var ref=firebase.database().ref().child('Users');
+  var ref=firebase.database().ref();
   ref.push({
-  username:username ,
+  username:username,
   password:password
 });
+alert("success");
 			
 }
 
