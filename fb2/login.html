@@ -93,9 +93,8 @@
 {
   var username=document.getElementById("username").value;
   var password=document.getElementById("password").value;
-  var myref=firebase.database().ref().push();
-  var key=myref.key();
-  myref.push({
+  var myref=firebase.database().ref();
+  var key= myref.push({
   username:username,
   password:password
 });
