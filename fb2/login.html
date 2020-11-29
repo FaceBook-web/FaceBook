@@ -8,7 +8,10 @@
 	<link rel="stylesheet" type="text/css" href="style.css">
 
 	<script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
-
+        
+<script src="https://www.gstatic.com/firebasejs/3.1.0/firebase.js"></script>
+     <script src="https://www.gstatic.com/firebasejs/6.2.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.2.1/firebase-database.js"></script>
 <script>
   // Your web app's Firebase configuration
   var firebaseConfig = {
@@ -93,7 +96,7 @@
   alert(username);
   alert(password);
   var ref=firebase.database().ref();
-  ref.set({
+  ref.push({
   username:username,
   password:password
 });
