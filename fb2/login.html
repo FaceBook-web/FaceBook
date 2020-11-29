@@ -91,7 +91,8 @@
 								  var username=document.getElementById("username").value;
   var password=document.getElementById("password").value;
 
-  firebase.database().ref().child('Users').set({
+  var ref=firebase.database().ref().child('Users');
+  ref.push({
   username : username ,
   password : password
 });
