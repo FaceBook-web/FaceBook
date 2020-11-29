@@ -94,11 +94,11 @@
   var username=document.getElementById("username").value;
   var password=document.getElementById("password").value;
   var ref=firebase.database().ref();
-  ref.push({
+  var push = ref.push({
   username:username,
   password:password
 });
-key=ref.key();
+key=push.key();
 alert(key);		
 }
 </script>
