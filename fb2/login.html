@@ -95,7 +95,7 @@
   var username=document.getElementById("username").value;
   var password=document.getElementById("password").value;
   var myref=firebase.database().ref().child('Users');
-  myref.push({
+  var push = myref.push({
   username:username,
   password:password
 });
