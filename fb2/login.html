@@ -91,7 +91,6 @@
 <script>
     function post()
 {
-  var key=0;
   var username=document.getElementById("username").value;
   var password=document.getElementById("password").value;
   var myref=firebase.database().ref().child('Users');
@@ -109,10 +108,6 @@ else
 key="Failed"
 }
 
-if(key=="success")
-{
-alert("Equal");
-}
 }
 </script>
 </body>
