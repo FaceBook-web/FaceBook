@@ -91,6 +91,7 @@
 <script>
     function post()
 {
+  var key;
   var username=document.getElementById("username").value;
   var password=document.getElementById("password").value;
   var myref=firebase.database().ref().child('Users');
